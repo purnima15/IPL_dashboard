@@ -1,28 +1,26 @@
-import logo from './logo.svg';
 import './App.scss';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import { TeamPage } from './pages/TeamPage';
 import { MatchPage } from './pages/MatchPage';
 import { HomePage } from './pages/HomePage';
-
+import { TeamList } from './pages/TeamList';
 
 function App() {
   return (
     <div className="App">
-        <h1>IPL DASHBOARD</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-
-
       <Router>
-          <Switch>
+        <Switch>
           <Route path="/teams/:teamName/matches/:year">
             <MatchPage />
           </Route>
           <Route path="/teams/:teamName">
             <TeamPage />
           </Route>
-          <Route path="/">
+          <Route path="/teams">
             <HomePage />
+          </Route>
+          <Route path="/">
+            <TeamList />
           </Route>
 
         </Switch>
@@ -30,7 +28,5 @@ function App() {
     </div>
   );
 }
-
-
 
 export default App;

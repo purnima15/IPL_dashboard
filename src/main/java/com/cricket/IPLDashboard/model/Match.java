@@ -21,6 +21,8 @@ public class Match {
 	private String winner;
 	private String result;
 	private String resultMargin;
+	private String umpire1;
+	private String umpire2;
 	
 	public long getId() {
 		return id;
@@ -107,8 +109,7 @@ public class Match {
 	public void setUmpire2(String umpire2) {
 		this.umpire2 = umpire2;
 	}
-	private String umpire1;
-	private String umpire2;
+
 	
 
 }
